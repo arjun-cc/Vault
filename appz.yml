@@ -27,10 +27,7 @@ volumes:
   - claim: vault-data
     mount: /appz/data
     name: data
-    size: 5Gi
-
-monitor:
-  notify: appzops@cloudbourne.co      
+    size: 5Gi      
 
 properties:
   ENABLE_AUTO_PASSWORD: True
