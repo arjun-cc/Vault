@@ -1,6 +1,6 @@
 app:
   name: Vault
-  code: VAULT
+  code: Vault
   notify: appz@cloudbourne.co
 
 build:
