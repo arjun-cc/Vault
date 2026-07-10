@@ -13,12 +13,26 @@ build:
 
 deploy:
   context: arjun-cc/DEV
+  type: statefulset
+  ingress: none
   replicas: 1
   port:
   - 8200
+  - 80
+
+volumes:
+  - claim: vault-home
+    mount: /appz/home
+    name: home
+    size: 5Gi
+  - claim: vault-data
+    mount: /appz/data
+    name: data
+    size: 5Gi
 
 monitor:
   notify: appzops@cloudbourne.co      
 
 properties:
+  ENABLE_AUTO_PASSWORD: True
   revision : 17
