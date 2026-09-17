@@ -4,11 +4,11 @@ app:
   notify: appz@cloudbourne.co
 
 build:
-  version: 0.4
+  version: 0
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: vault-1.2
+  image_template: vault-2.0
 
 deploy:
   context: arjun-cc/DEV
